@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+	<div class="app">
+		<canvas id="canvas">default content</canvas>
+
+		<label class="toggle-pane">
+			<input type="checkbox" id="togglePane" />
+			<span></span>
+		</label>
+
+		<div id="control-pane">
+
+			<div class="switch-container">
+				<legend>Fade
+					<label class="switch">
+						<input type="checkbox" id="fadeOut" checked>
+						<span class="slider"></span>
+					</label>
+				</legend>
+
+				<legend>Random
+					<label class="switch">
+						<input type="checkbox" id="randomSize" checked>
+						<span class="slider"></span>
+					</label>
+				</legend>
+
+				<legend>Fill
+					<label class="switch">
+						<input type="checkbox" id="shapeFill">
+						<span class="slider"></span>
+					</label>
+				</legend>
+
+			</div>
+
+			<div class="container">
+				<div class="legend">Shape-size</div>
+				<div class="shapeSize wrapper">
+					<input type="range" id="shapeSizeRangeInput" min="1" max="100" value="25" />
+					<input type="text" id="shapeSizeInput" value="25" />
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="legend">Line-width</div>
+				<div class="lineWidth wrapper">
+					<input type="range" id="lineWidthRangeInput" min="1" max="5" value="2" />
+					<input type="text" id="lineWidthInput" value="2" />
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="legend">Speed</div>
+				<div class="speed wrapper">
+					<input type="range" id="speedRangeInput" min="1" max="10" value="10" />
+					<input type="text" id="speedInput" value="10" />
+				</div>
+			</div>
+
+
+
+			<button id="cleanCanvas">clean</button>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./state.js"></script>
+	<script type="text/javascript" src="./helpers.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./eventListeners.js"></script>
+
+</body>
+
+</html>
